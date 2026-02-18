@@ -1,11 +1,17 @@
+/* ===============================
+   FOOTER DESIGN
+================================= */
 
 .footer {
     background: #ffffff;
     border-top: 1px solid #e5e7eb;
     padding: 60px 8% 20px;
     font-family: 'Poppins', sans-serif;
-    margin-left: 230px;
+    margin-left: 230px; /* desktop sidebar space */
+    transition: 0.3s ease;
 }
+
+/* Grid Layout */
 
 .footer-container {
     display: grid;
@@ -14,44 +20,55 @@
     margin-bottom: 40px;
 }
 
+/* Headings */
+
 .footer-col h3,
 .footer-col h4 {
-    color: #0056b3;
+    color: var(--secondary);
     margin-bottom: 15px;
 }
+
+/* Paragraph */
 
 .footer-col p {
     margin-bottom: 10px;
     color: #555;
     font-size: 14px;
+    line-height: 1.6;
 }
+
+/* Links */
 
 .footer-col a {
     text-decoration: none;
-    color: #FFC107;
+    color: var(--primary);
     font-weight: 500;
     transition: 0.3s ease;
 }
 
 .footer-col a:hover {
-    color: #0056b3;
+    color: var(--secondary);
 }
+
+/* Map Button */
 
 .map-btn {
     display: inline-block;
-    margin-top: 10px;
-    padding: 8px 20px;
-    background: #FFC107;
-    border-radius: 25px;
+    margin-top: 12px;
+    padding: 10px 22px;
+    background: var(--primary);
+    border-radius: 30px;
     color: #000 !important;
     font-weight: 600;
     transition: 0.3s ease;
 }
 
 .map-btn:hover {
-    background: #0056b3;
+    background: var(--secondary);
     color: #fff !important;
 }
+
+/* Bottom Copyright */
 
 .footer-bottom {
     text-align: center;
@@ -61,3 +78,28 @@
     padding-top: 15px;
 }
 
+/* ===============================
+   MOBILE RESPONSIVE FIX
+================================= */
+
+@media (max-width: 992px) {
+
+    .footer {
+        margin-left: 0;        /* remove sidebar space */
+        padding: 50px 6% 20px; /* slightly reduce padding */
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr; /* stack vertically */
+        text-align: center;
+    }
+
+    .footer-col {
+        margin-bottom: 25px;
+    }
+
+    .map-btn {
+        display: inline-block;
+        margin-top: 15px;
+    }
+}

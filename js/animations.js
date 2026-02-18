@@ -1,14 +1,24 @@
-// Fade-in on scroll
+// ===============================
+// SCROLL ANIMATION ONLY
+// ===============================
 
-const elements = document.querySelectorAll(".fade-in");
+document.addEventListener("DOMContentLoaded", function () {
 
-window.addEventListener("scroll", () => {
-    elements.forEach(el => {
-        const position = el.getBoundingClientRect().top;
-        const screenPosition = window.innerHeight / 1.3;
+    const elements = document.querySelectorAll(".fade-in");
 
-        if (position < screenPosition) {
-            el.classList.add("active");
-        }
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.remove("hidden");
+            }
+        });
+    }, {
+        threshold: 0.2
     });
+
+    elements.forEach(el => {
+        el.classList.add("hidden");   // hide only after DOM loads
+        observer.observe(el);
+    });
+
 });

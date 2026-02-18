@@ -1,10 +1,15 @@
+/* ===============================
+   SCROLL ANIMATION ONLY
+================================= */
+
 .fade-in {
-    opacity: 0;
-    transform: translateY(40px);
+    opacity: 1;                /* visible by default */
+    transform: translateY(0);  /* no shift at start */
     transition: all 0.8s ease;
 }
 
-.fade-in.active {
-    opacity: 1;
-    transform: translateY(0);
+/* When element is not visible yet */
+.fade-in.hidden {
+    opacity: 0;
+    transform: translateY(40px);
 }

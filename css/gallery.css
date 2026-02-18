@@ -95,7 +95,22 @@
 /* Responsive */
 
 @media (max-width: 768px) {
-    .gallery-item img {
-        height: 250px;
+
+    .gallery-section {
+        padding: 80px 5%;
     }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;   /* 1 image per row */
+        gap: 25px;
+    }
+
+    .gallery-item img {
+        height: auto;          /* REMOVE fixed height */
+        max-height: 500px;     /* prevent too tall */
+        object-fit: contain;   /* NO CROPPING */
+        background: #f5f7fa;   /* soft background if gap appears */
+    }
+
 }
+
