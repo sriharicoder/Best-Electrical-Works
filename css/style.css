@@ -118,7 +118,6 @@ body {
     text-decoration: none;
     font-weight: 600;
     transition: var(--transition);
-    margin: 0 8px;
     display: inline-block;
 }
 
@@ -225,5 +224,32 @@ body {
 
     .hero h1 {
         font-size: 36px;
+    }
+}
+
+/* ===============================
+   HERO BUTTON FIX - MOBILE
+================================= */
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;              /* space between buttons */
+    flex-wrap: wrap;
+}
+
+/* Mobile: stack buttons */
+@media (max-width: 576px) {
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;          /* vertical space */
+    }
+
+    .hero-buttons .btn {
+        width: 80%;         /* nice mobile width */
+        text-align: center;
+        margin: 0;          /* remove old margin */
     }
 }

@@ -3,7 +3,7 @@
 ================================= */
 
 .about-section {
-    padding: 40px 0;
+    padding-bottom: 80px;
 }
 
 .about-title {
@@ -60,13 +60,42 @@
     margin-top: 60px;
 }
 
+
 .secondary-btn {
     background: var(--secondary);
-    color: #fff;
-    margin-left: 15px;
+    color: #ffffff;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(13, 71, 161, 0.25);
 }
 
 .secondary-btn:hover {
     background: var(--primary);
     color: #000;
+}
+
+/* ===============================
+   ABOUT CTA MOBILE FIX
+================================= */
+
+.about-cta {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Mobile layout */
+@media (max-width: 576px) {
+
+    .about-cta {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .about-cta .btn {
+        width: 85%;
+        text-align: center;
+        margin: 0;
+    }
 }
