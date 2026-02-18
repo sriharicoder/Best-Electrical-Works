@@ -103,3 +103,44 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* Hide by default (desktop) */
+.map-open-btn {
+    display: none;
+}
+
+/* Show only in mobile */
+@media (max-width: 768px) {
+
+    .map-open-btn {
+        display: block;
+        text-align: center;
+        margin-top: 25px;
+    }
+
+    .map-open-btn a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        padding: 14px 28px;
+        border-radius: 50px;
+
+        background: linear-gradient(135deg, #FFC107, #ffb300);
+        color: #000;
+        text-decoration: none;
+
+        font-weight: 600;
+        font-size: 15px;
+
+        transition: 0.3s ease;
+        box-shadow: 0 8px 20px rgba(255, 193, 7, 0.3);
+    }
+
+    .map-open-btn a:hover {
+        background: var(--secondary);
+        color: #fff;
+        transform: translateY(-3px);
+    }
+}
