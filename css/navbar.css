@@ -5,35 +5,40 @@
 .navbar {
     position: fixed;
     top: 0;
-    left: 230px;                     /* desktop sidebar width */
+    left: 230px;                     
     width: calc(100% - 230px);
 
-    height: 80px;
+    height: 95px;                 /* slightly taller */
+
     background: #ffffff;
     border-bottom: 1px solid #e5e7eb;
 
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;          /* center everything */
 
     box-shadow: 0 2px 15px rgba(0,0,0,0.04);
     z-index: 1000;
 }
 
-/* Logo */
+/* Company Name */
 .logo {
     font-weight: 700;
-    font-size: 20px;
+    font-size: 28px;              /* 🔥 Increased */
     color: #0d47a1;
     letter-spacing: 1px;
+    text-align: center;
 }
 
+/* GST Number */
 .gstin {
-    font-size: 13px;
-    color: #777;
-    margin-top: 4px;
+    font-size: 16px;              /* 🔥 Increased */
+    color: #666;
+    margin-top: 6px;
+    text-align: center;           /* ensure center */
 }
+
 
 /* ===============================
    MOBILE VIEW
