@@ -1,0 +1,77 @@
+/* ===============================
+   LOCATION PAGE DESIGN
+================================= */
+
+.location-page {
+    padding: 40px 0;
+}
+
+.location-title {
+    text-align: center;
+    font-size: 36px;
+    color: var(--secondary);
+    margin-bottom: 60px;
+}
+
+/* Layout */
+.location-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+    align-items: center;
+}
+
+/* Address Card */
+.location-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+}
+
+.location-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.08);
+}
+
+.location-card h3 {
+    color: var(--secondary);
+    margin-bottom: 20px;
+}
+
+.location-card p {
+    margin-bottom: 12px;
+    color: #555;
+    font-size: 15px;
+}
+
+.location-card a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.location-card a:hover {
+    color: var(--secondary);
+}
+
+/* Call Button */
+.call-btn {
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/* Map Card */
+.map-card iframe {
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .location-wrapper {
+        grid-template-columns: 1fr;
+    }
+}

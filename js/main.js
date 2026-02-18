@@ -3,16 +3,11 @@
 // ===============================
 
 document.addEventListener("DOMContentLoaded", function () {
-
-    console.log("Main JS Loaded ✅");
-
-    // -------------------------------
-    // Load Navbar and Footer
-    // -------------------------------
-
     loadComponent("navbar-container", "navbar.html");
     loadComponent("footer-container", "footer.html");
+    loadComponent("sidebar-container", "sidebar.html");
 
+    enableSmoothScroll();
 });
 
 
@@ -36,10 +31,8 @@ function loadComponent(id, file) {
                 container.innerHTML = data;
                 console.log(file + " loaded successfully ✅");
 
-                // Re-activate smooth scroll after loading components
+                // Re-enable smooth scroll after loading
                 enableSmoothScroll();
-            } else {
-                console.error("Container not found:", id);
             }
         })
         .catch(error => {
@@ -49,26 +42,50 @@ function loadComponent(id, file) {
 
 
 // -------------------------------
-// Smooth Scroll Function
+// Smooth Scroll with Navbar Offset
 // -------------------------------
 
 function enableSmoothScroll() {
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
-        anchor.addEventListener("click", function (e) {
-
-            const target = document.querySelector(this.getAttribute("href"));
-
-            if (target) {
-                e.preventDefault();
-                target.scrollIntoView({
-                    behavior: "smooth"
-                });
-            }
-
-        });
+        anchor.removeEventListener("click", handleScroll);
+        anchor.addEventListener("click", handleScroll);
 
     });
+}
 
+function handleScroll(e) {
+
+    const targetId = this.getAttribute("href");
+
+    if (targetId.length > 1) {
+
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+            e.preventDefault();
+
+            const navbarHeight = document.querySelector(".navbar")?.offsetHeight || 0;
+
+            const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+
+            window.scrollTo({
+                top: elementPosition - navbarHeight - 20,
+                behavior: "smooth"
+            });
+        }
+    }
+}
+
+
+// -------------------------------
+// Sidebar Toggle (Optional)
+// -------------------------------
+
+function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    if (sidebar) {
+        sidebar.classList.toggle("active");
+    }
 }

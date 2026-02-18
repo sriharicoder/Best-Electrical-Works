@@ -1,0 +1,56 @@
+/* ===============================
+   SIDEBAR FIXED BELOW NAVBAR
+================================= */
+
+.sidebar {
+    position: fixed;
+    top: 80px;   /* height of navbar */
+    left: 0;
+    width: 230px;
+    height: calc(100vh - 80px);
+    background: #f4f7fb;  /* soft light blue */
+    border-right: 1px solid #e0e6ed;
+    padding: 30px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Sidebar Links */
+.sidebar-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-links a {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    margin-bottom: 12px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.sidebar-links a:hover {
+    background: #e6f0ff;
+    transform: translateX(6px);
+}
+
+.sidebar-links .icon {
+    margin-right: 12px;
+}
+
+/* Ask Service Button */
+.sidebar-btn {
+    margin-top: 20px;
+    background: #FFC107;
+    color: #000 !important;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.sidebar-btn:hover {
+    background: #0056b3;
+    color: #fff !important;
+}

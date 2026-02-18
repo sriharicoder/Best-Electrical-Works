@@ -1,89 +1,36 @@
+/* ===============================
+   FIXED NAVBAR
+================================= */
 
 .navbar {
-    position: sticky;
+    position: fixed;              /* IMPORTANT */
     top: 0;
-    background: rgba(255,255,255,0.95);
-    backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px 8%;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.05);
-    z-index: 999;
-    font-family: 'Poppins', sans-serif;
-}
+    left: 230px;                  /* match sidebar width */
+    width: calc(100% - 230px);    /* full width minus sidebar */
 
-.logo-area {
+    height: 80px;
+
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
+
+    box-shadow: 0 2px 15px rgba(0,0,0,0.04);
+    z-index: 1000;
 }
 
 .logo {
     font-weight: 700;
-    font-size: 18px;
-    color: #0056b3;
+    font-size: 20px;
+    color: #0d47a1;
+    letter-spacing: 1px;
 }
 
 .gstin {
-    font-size: 12px;
+    font-size: 13px;
     color: #777;
+    margin-top: 4px;
 }
-
-.nav-links {
-    display: flex;
-    align-items: center;
-}
-
-.nav-links a {
-    margin-left: 30px;
-    text-decoration: none;
-    color: #1a1a1a;
-    font-weight: 500;
-    position: relative;
-    transition: 0.3s ease;
-}
-
-.nav-links a::after {
-    content: "";
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    bottom: -5px;
-    left: 0;
-    background: #FFC107;
-    transition: 0.3s ease;
-}
-
-.nav-links a:hover::after {
-    width: 100%;
-}
-
-.nav-btn {
-    background: #FFC107;
-    padding: 8px 18px;
-    border-radius: 25px;
-    color: #000 !important;
-    font-weight: 600;
-}
-
-.nav-btn:hover {
-    background: #0056b3;
-    color: #fff !important;
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav-links {
-        flex-wrap: wrap;
-        margin-top: 10px;
-    }
-
-    .nav-links a {
-        margin: 10px 15px 0 0;
-    }
-}
-

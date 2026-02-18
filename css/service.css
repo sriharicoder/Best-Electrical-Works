@@ -1,0 +1,81 @@
+/* ===============================
+   SERVICES PAGE PREMIUM DESIGN
+================================= */
+
+.services-section {
+    padding: 40px 0;
+}
+
+.services-title {
+    text-align: center;
+    font-size: 36px;
+    color: var(--secondary);
+    margin-bottom: 60px;
+}
+
+/* Container Grid */
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+/* Service Box */
+
+.service-box {
+    background: #ffffff;
+    padding: 50px 35px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.service-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.08);
+}
+
+/* Icon */
+
+.service-icon {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+/* Title */
+
+.service-box h3 {
+    color: var(--secondary);
+    margin-bottom: 15px;
+}
+
+/* Description */
+
+.service-box p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* Bottom Button */
+
+.service-bottom-btn {
+    text-align: center;
+    margin-top: 70px;
+}
+
+.service-bottom-btn .btn {
+    padding: 14px 40px;
+    font-size: 16px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .services-title {
+        font-size: 28px;
+    }
+}

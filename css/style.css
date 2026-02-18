@@ -3,11 +3,10 @@
 ================================= */
 
 :root {
-    --bg-light: #f8f9fb;
-    --primary: #FFC107;        /* Electric Yellow */
-    --secondary: #0056b3;      /* Corporate Blue */
+    --bg-light: #ffffff;              /* clean white */
+    --primary: #FFC107;               /* Electric Yellow */
+    --secondary: #0d47a1;             /* Deep Corporate Blue */
     --text-dark: #1a1a1a;
-    --white: #ffffff;
     --border: #e5e7eb;
     --transition: all 0.3s ease;
 }
@@ -24,40 +23,62 @@ body {
     color: var(--text-dark);
     overflow-x: hidden;
 }
+
+/* ===============================
+   MAIN CONTENT AREA
+================================= */
+
+.main-content {
+    margin-left: 230px;              /* sidebar width */
+    padding: 100px 6% 60px;
+    min-height: 100vh;
+}
+
 /* ===============================
    HERO SECTION
 ================================= */
 
 .hero {
-    height: 100vh;
+    min-height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 10%;
-    background: linear-gradient(to right, #ffffff, #eef2f7);
+
+    /* clean full white background */
+    background: #ffffff;
+
+    padding: 40px 0;
 }
 
 .hero h1 {
     font-size: 48px;
     margin-bottom: 20px;
     color: var(--secondary);
+    line-height: 1.2;
 }
 
 .hero p {
     margin-bottom: 30px;
     color: #555;
+    font-size: 18px;
 }
 
+/* ===============================
+   BUTTONS
+================================= */
+
 .btn {
-    padding: 12px 28px;
-    border-radius: 30px;
+    padding: 14px 32px;
+    border-radius: 40px;
     background: var(--primary);
     color: #000;
     text-decoration: none;
     font-weight: 600;
     transition: var(--transition);
+    margin: 0 8px;
+    display: inline-block;
 }
 
 .btn:hover {
@@ -71,83 +92,82 @@ body {
 ================================= */
 
 .hero-logo {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     animation: floatLogo 4s ease-in-out infinite;
 }
 
 .hero-logo img {
-    width: 260px;
+    width: 240px;
     max-width: 90%;
     object-fit: contain;
-    filter: drop-shadow(0 8px 15px rgba(0,0,0,0.1));
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.08));
 }
 
-/* Smooth floating animation */
 @keyframes floatLogo {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-8px); }
     100% { transform: translateY(0px); }
 }
 
-
 /* ===============================
    SECTION
 ================================= */
 
 .section {
-    padding: 100px 8%;
+    padding: 100px 0;
 }
 
 .section h2 {
-    font-size: 32px;
-    margin-bottom: 40px;
+    font-size: 36px;
+    margin-bottom: 50px;
     text-align: center;
     color: var(--secondary);
 }
 
 /* ===============================
-   CARDS
+   CARD GRID
 ================================= */
 
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
 }
 
 .card {
-    background: var(--white);
+    background: #ffffff;
     padding: 40px;
-    border-radius: 15px;
+    border-radius: 16px;
     border: 1px solid var(--border);
     transition: var(--transition);
 }
 
 .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
 }
 
+.card h3 {
+    margin-bottom: 15px;
+    color: var(--secondary);
+}
+
+.card p {
+    color: #555;
+    margin-bottom: 15px;
+}
 
 /* ===============================
    RESPONSIVE
 ================================= */
 
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
+@media (max-width: 992px) {
+    .main-content {
+        margin-left: 0;
+        padding: 120px 5% 60px;
     }
 
     .hero h1 {
-        font-size: 32px;
+        font-size: 36px;
     }
-}
-
-.nav-links a.active {
-    color: var(--secondary);
-    font-weight: 600;
-}
-
-.nav-links a.active::after {
-    width: 100%;
 }

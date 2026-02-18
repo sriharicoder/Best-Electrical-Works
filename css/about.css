@@ -1,0 +1,72 @@
+/* ===============================
+   ABOUT PAGE STYLING
+================================= */
+
+.about-section {
+    padding: 40px 0;
+}
+
+.about-title {
+    text-align: center;
+    font-size: 36px;
+    color: var(--secondary);
+    margin-bottom: 60px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.about-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 18px;
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.about-card h3 {
+    color: var(--secondary);
+    margin-bottom: 15px;
+}
+
+.about-card p {
+    color: #555;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.about-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-card ul li {
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #444;
+}
+
+.about-cta {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.secondary-btn {
+    background: var(--secondary);
+    color: #fff;
+    margin-left: 15px;
+}
+
+.secondary-btn:hover {
+    background: var(--primary);
+    color: #000;
+}
